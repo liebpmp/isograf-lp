@@ -1,34 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Nav from '@/components/Nav'
+import Hero from '@/components/sections/Hero'
+import PainPoints from '@/components/sections/PainPoints'
+import Differentiator from '@/components/sections/Differentiator'
+import ProcessTimeline from '@/components/sections/ProcessTimeline'
+import Expert from '@/components/sections/Expert'
+import Testimonials from '@/components/sections/Testimonials'
+import FAQ from '@/components/sections/FAQ'
+import FinalCTA from '@/components/sections/FinalCTA'
+import Footer from '@/components/sections/Footer'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="min-h-screen bg-deep-navy">
+      <Nav />
+      <main>
+        <Hero />
+        <PainPoints />
+        <Differentiator />
+        <ProcessTimeline />
+        <Expert />
+        <Testimonials />
+        <FAQ />
+        <FinalCTA />
+      </main>
+      <Footer />
+    </div>
   )
 }
 
